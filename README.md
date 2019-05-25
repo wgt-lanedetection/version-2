@@ -11,11 +11,13 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - - Isolieren der Weißen Farbe: Weiße Fahrbahnmarkierung
 - Bitweise ODER gelbe und weiße Masken, um eine gemeinsame Maske zu erhalten.
 - Perspektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten
-- - src (sorce) und- dst(destination) Parameter um die Transformierten Bereiche zu definieren.
-- Bestimmen andhand des Binärbild die am besten geeignete Kurve für jede Spur durch Polynomische Anpassung / polinominal fit. Dazu wird für jede Fahrspur ein Polynom zweiter Ordnung bestimmt.
+- - src (sorce) und- dst (destination) Parameter um die Transformierten Bereiche zu definieren.
+- Bestimmen andhand des Binärbild die am besten geeignete Kurve für jede Spur durch Polynomische Anpassung. Dazu wird für jede Fahrspur ein Polynom zweiter Ordnung bestimmt.
 - - Es wird ein Histogramm berechnet, um die Position der Fahrspur an der x-Achse zu bestimmen.
-- - Bild wird in 9 horizontale Schichten aufgeteilt
-- - 
+- - Das Bild wird in 9 horizontale Schichten aufgeteilt
+- - Plazieren eines Fensters um den Mittelpunkt der Spur
+- - Plazieren weiterer Fenster um den Mittelpunklt der übrigen 8 Fenster. Diese Methode Folgt der "Spur" bis zum oberen Rand des Binärbildes und beschleunigt die Verarbeitung indem es nur nach aktiven Pixeln über einen kleinen Teil des Bildes sucht.
+- - Pixel, die zu jeder Spurlinie gehören, werden identifiziert und die Numpy polyfit()-Methode wird Polynom zweiter Ordnung errchnet
 - Projizieren Sie die Fahrspurbegrenzungen wieder auf das unverzerrte Bild der ursprünglichen Ansicht. 
 - Ausgabe einer visuellen Anzeige der Fahrspurbegrenzungen und anderer verwandter Informationen 
 

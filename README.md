@@ -1,11 +1,12 @@
 # version-2
 Advanced Lane detection
 
-Erstellung eines fortschrittlichen Spurfindungsalgorithmus mit: 
--Kamerakalibrierung
--Verzerrungskorrektur
--Bildkorrektur 
--Farbumwandlungen und Gradientenschwellenwert
--Identifizierte Fahrbahnkrümmung
--Ertmittlung der Position zur Fahrbahnmitte
-
+Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
+- Berechnen der Kamerakalibriermatrix und der Verzerrungskoeffizienten des verwendeten Kameraobjektivs anhand einer Reihe von Schachbrettbildern, die von derselben Kamera aufgenommen wurden.
+- Verwendung der vorgenannten Matrix und des Koeffizienten zur Korrektur der Verzerrungen, die durch die Rohdatenausgabe der Kamera entstehen.
+- Verwenden Sie Farbtransformationen und Sobel-Algorithmus, um ein Binärbild zu erstellen, das aus unnötigen Informationen über das Bild herausgefiltert wurde. 
+- Wenden Sie die perspektivische Transformation an, um eine "Vogelperspektive" des Bildes zu sehen, als ob Sie vom Himmel blicken würden. 
+- Wenden Sie die Maskierung an, um den gewünschten Bereich zu erhalten, erkennen Sie Fahrbahnpixel, 
+- Bestimmen Sie die am besten geeignete Kurve für jede Spur die Krümmung der Spuren.
+- Projizieren Sie die Fahrspurbegrenzungen wieder auf das unverzerrte Bild der ursprünglichen Ansicht. 
+- Ausgabe einer visuellen Anzeige der Fahrspurbegrenzungen und anderer verwandter Informationen 

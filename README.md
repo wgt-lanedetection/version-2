@@ -10,10 +10,10 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - - Isolieren der Gelben Farbe: Gelbe Fahrbahnmarkierung
 - - Isolieren der Weißen Farbe: Weiße Fahrbahnmarkierung
 - Bitweise ODER gelbe und weiße Masken, um eine gemeinsame Maske zu erhalten.
-- Üersüektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten
-- - src (sorce)und- dst(destination) Parameter um die Transformierten Bereiche anzugeben
-- Wenden Sie die Maskierung an, um den gewünschten Bereich zu erhalten, erkennen Sie Fahrbahnpixel, 
-- Bestimmen Sie die am besten geeignete Kurve für jede Spur die Krümmung der Spuren.
+- Perspektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten
+- - src (sorce) und- dst(destination) Parameter um die Transformierten Bereiche zu definieren.
+- Bestimmen andhand des Binärbild die am besten geeignete Kurve für jede Spur durch Polynomische Anpassung / polinominal fit. Dazu wird für jede Fahrspur ein Polynom zweiter Ordnung bestimmt
+- - Bild wird in 9 horizontale Schichten aufgeteilt und 
 - Projizieren Sie die Fahrspurbegrenzungen wieder auf das unverzerrte Bild der ursprünglichen Ansicht. 
 - Ausgabe einer visuellen Anzeige der Fahrspurbegrenzungen und anderer verwandter Informationen 
 

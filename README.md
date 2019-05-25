@@ -4,10 +4,14 @@
 In diesem Projekt wurden Computer Vision Techniken verwendet, um Fahrspurbegrenzungen zu identifizieren.
 
 Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
-- Berechnen der Kamerakalibriermatrix und der Verzerrungskoeffizienten des verwendeten Kameraobjektivs anhand einer Reihe von Schachbrettbildern, die von derselben Kamera aufgenommen wurden.
-- Verwendung der vorgenannten Matrix und des Koeffizienten zur Korrektur der Verzerrungen, die durch die Rohdatenausgabe der Kamera entstehen.
-- Verwenden Sie Farbtransformationen und Sobel-Algorithmus, um ein Binärbild zu erstellen, das aus unnötigen Informationen über das Bild herausgefiltert wurde. 
-- Wenden Sie die perspektivische Transformation an, um eine "Vogelperspektive" des Bildes zu sehen, als ob Sie vom Himmel blicken würden. 
+- Berechnen der Kamerakalibriermatrix und der Verzerrungskoeffizienten der verwendeten Kamera anhand einer Reihe von Schachbrettbildern, die von derselben Kamera aufgenommen wurden.
+- Entzerren der einzelen Frames anhand der zurvor errechneten Matrizen
+- Umwandeln des Originalsbildes in den HLS-Farbraum und anwendung des Sobel-Algorithmus um:
+- - Isolieren der Gelben Farbe: Gelbe Fahrbahnmarkierung
+- - Isolieren der Weißen Farbe: Weiße Fahrbahnmarkierung
+- Bitweise ODER gelbe und weiße Masken, um eine gemeinsame Maske zu erhalten.
+- Üersüektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten
+- - src (sorce)und- dst(destination) Parameter um die Transformierten Bereiche anzugeben
 - Wenden Sie die Maskierung an, um den gewünschten Bereich zu erhalten, erkennen Sie Fahrbahnpixel, 
 - Bestimmen Sie die am besten geeignete Kurve für jede Spur die Krümmung der Spuren.
 - Projizieren Sie die Fahrspurbegrenzungen wieder auf das unverzerrte Bild der ursprünglichen Ansicht. 

@@ -13,7 +13,7 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Projizieren Sie die Fahrspurbegrenzungen wieder auf das unverzerrte Bild der ursprünglichen Ansicht. 
 - Ausgabe einer visuellen Anzeige der Fahrspurbegrenzungen und anderer verwandter Informationen 
 
-### Requirements 
+### Anforderungen/Requirements 
 - numpy
 - opencv
 - python3 

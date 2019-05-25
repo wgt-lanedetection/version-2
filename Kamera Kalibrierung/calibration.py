@@ -51,8 +51,7 @@ img = mpimg.imread(fname)
 img_size = (img.shape[1], img.shape[0])
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, img_size, None, None)
 
-print('mtx: ', mtx.shape)
-print('dist: ', dist.shape)
+# Die errechneten Matrizen für die Entzerrungsfunktion
 
 print(mtx)
 print(dist)

@@ -9,5 +9,5 @@ camera.start_preview()
 
 for i in range(20):
     sleep(2)
-    camera.capture('/home/pi/lane/calibration/calibration%s.jpg' % i)
+    camera.capture('/home/pi/lane/calibration/calibration%s.jpg' % i) # Hier den Pfad eingeben
 camera.stop_preview()

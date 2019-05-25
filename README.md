@@ -12,8 +12,10 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Bitweise ODER gelbe und weiße Masken, um eine gemeinsame Maske zu erhalten.
 - Perspektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten
 - - src (sorce) und- dst(destination) Parameter um die Transformierten Bereiche zu definieren.
-- Bestimmen andhand des Binärbild die am besten geeignete Kurve für jede Spur durch Polynomische Anpassung / polinominal fit. Dazu wird für jede Fahrspur ein Polynom zweiter Ordnung bestimmt
-- - Bild wird in 9 horizontale Schichten aufgeteilt und 
+- Bestimmen andhand des Binärbild die am besten geeignete Kurve für jede Spur durch Polynomische Anpassung / polinominal fit. Dazu wird für jede Fahrspur ein Polynom zweiter Ordnung bestimmt.
+- - Es wird ein Histogramm berechnet, um die Position der Fahrspur an der x-Achse zu bestimmen.
+- - Bild wird in 9 horizontale Schichten aufgeteilt
+- - 
 - Projizieren Sie die Fahrspurbegrenzungen wieder auf das unverzerrte Bild der ursprünglichen Ansicht. 
 - Ausgabe einer visuellen Anzeige der Fahrspurbegrenzungen und anderer verwandter Informationen 
 

@@ -19,19 +19,6 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - python3 
 - picamera
 
-### HOW TO USE
-- You need to setup dependencies to run a Jupyter Notebook on your computer and setup a handful of packages such as `opencv`
-```
-import matplotlib.pyplot as plt
-%matplotlib inline
-import cv2 
-import numpy as np
-import pickle
-from scipy.misc import imread
-
-from moviepy.editor import VideoFileClip
-from IPython.display import HTML
-```
 ### Wichtige Links
 
 - Video Anleitung für OpenCV für den Raspberry pi

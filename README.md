@@ -1,5 +1,7 @@
 # version-2
-Advanced Lane detection
+## Advanced Lane detection
+
+In diesem Projekt wurden Computer Vision Techniken verwendet, um Fahrspurbegrenzungen zu identifizieren.
 
 Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Berechnen der Kamerakalibriermatrix und der Verzerrungskoeffizienten des verwendeten Kameraobjektivs anhand einer Reihe von Schachbrettbildern, die von derselben Kamera aufgenommen wurden.

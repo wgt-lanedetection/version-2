@@ -26,3 +26,8 @@ from scipy.misc import imread
 
 from moviepy.editor import VideoFileClip
 from IPython.display import HTML
+
+# Wichtige Links
+
+- Video Anleitung für OpenCV für den Raspberry pi
+- - https://www.youtube.com/watch?v=ZuhPzP5lt9U&list=LL0DRCOCzI5IYxkaMweeubRA&index=13&t=1832s

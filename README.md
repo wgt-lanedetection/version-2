@@ -13,13 +13,13 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Projizieren Sie die Fahrspurbegrenzungen wieder auf das unverzerrte Bild der ursprünglichen Ansicht. 
 - Ausgabe einer visuellen Anzeige der Fahrspurbegrenzungen und anderer verwandter Informationen 
 
-### Anforderungen/Requirements 
+## Anforderungen/Requirements 
 - numpy
 - opencv
 - python3 
 - picamera
 
-### Wichtige Links
+## Wichtige Links
 
 - Video Anleitung für OpenCV für den Raspberry pi
 - - https://www.youtube.com/watch?v=ZuhPzP5lt9U&list=LL0DRCOCzI5IYxkaMweeubRA&index=13&t=1832s

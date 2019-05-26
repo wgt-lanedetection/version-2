@@ -29,7 +29,9 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - opencv
 - python3 
 - picamera
-Markup: 1. James Madison
+
+Markup: 
+1. James Madison
 2. James Monroe
 3. John Quincy Adams
 

@@ -30,16 +30,10 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - python3 
 - picamera
 
-1. one
 
-2. two
-3. three
-
-1.  one
-    - a
-
-    - b
-2.  two
+* a
+* * * * *
+* b
 
 ## Wichtige Links
 

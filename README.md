@@ -16,7 +16,7 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Perspektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten
   - src (sorce) und- dst (destination) Parameter um die Transformierten Bereiche zu definieren.
 - Bestimmen andhand des Binärbild die am besten geeignete Kurve für jede Spur durch Polynomische Anpassung. Dazu wird für jede Fahrspur ein Polynom zweiter Ordnung bestimmt.
-  - 1-Es wird ein Histogramm berechnet, um die Position der Fahrspur an der x-Achse zu bestimmen.
+  - Es wird ein Histogramm berechnet, um die Position der Fahrspur an der x-Achse zu bestimmen.
   - Das Bild wird in 9 horizontale Schichten aufgeteilt
   - Plazieren eines Fensters um den Mittelpunkt der Spur
   - Plazieren weiterer Fenster um den Mittelpunklt der übrigen 8 Fenster. Diese Methode Folgt der "Spur" bis zum oberen Rand des Binärbildes und beschleunigt die Verarbeitung indem es nur nach aktiven Pixeln über einen kleinen Teil des Bildes sucht.
@@ -29,12 +29,6 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - opencv
 - python3 
 - picamera
-
-1. First ordered list item
-
-  Paragraph of first item.
-
-2. Another item
 
 ## Wichtige Links
 

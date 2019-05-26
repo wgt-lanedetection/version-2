@@ -10,7 +10,7 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Berechnen der Kamerakalibriermatrix und der Verzerrungskoeffizienten der verwendeten Kamera anhand einer Reihe von Schachbrettbildern, die von derselben Kamera aufgenommen wurden.
 - Entzerren der einzelen Frames anhand der zurvor errechneten Matrizen
 - Umwandeln des Originalsbildes in den HLS-Farbraum und anwendung des Sobel-Algorithmus um:
-- - Isolieren der Gelben Farbe: Gelbe Fahrbahnmarkierung
+ - Isolieren der Gelben Farbe: Gelbe Fahrbahnmarkierung
 - - Isolieren der Weißen Farbe: Weiße Fahrbahnmarkierung
 - Bitweise ODER gelbe und weiße Masken, um eine gemeinsame Maske zu erhalten.
 - Perspektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten

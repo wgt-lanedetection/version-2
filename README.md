@@ -4,7 +4,8 @@
 ![](ruby1.png)
 
 * * * *
-#### Beispiel der Spurerkennung an einer Teststrecke (im Arbeitszimmer :house:)
+#### Beispiel der Spurerkennung an einer Teststrecke (im Arbeitszimmer) :house:
+
 ![](Beispiel.png)
 
 

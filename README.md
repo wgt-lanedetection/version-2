@@ -16,7 +16,7 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Perspektivische Transformation, um eine "Vogelperspektive" des Bildes zu erhalten
 - - src (sorce) und- dst (destination) Parameter um die Transformierten Bereiche zu definieren.
 - Bestimmen andhand des Binärbild die am besten geeignete Kurve für jede Spur durch Polynomische Anpassung. Dazu wird für jede Fahrspur ein Polynom zweiter Ordnung bestimmt.
-   1. Es wird ein Histogramm berechnet, um die Position der Fahrspur an der x-Achse zu bestimmen.
+1.    Es wird ein Histogramm berechnet, um die Position der Fahrspur an der x-Achse zu bestimmen.
    2. Das Bild wird in 9 horizontale Schichten aufgeteilt
    3. Plazieren eines Fensters um den Mittelpunkt der Spur
    4. Plazieren weiterer Fenster um den Mittelpunklt der übrigen 8 Fenster. Diese Methode Folgt der "Spur" bis zum oberen Rand des Binärbildes und beschleunigt die Verarbeitung indem es nur nach aktiven Pixeln über einen kleinen Teil des Bildes sucht.

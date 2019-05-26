@@ -21,7 +21,7 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
   - Plazieren eines Fensters um den Mittelpunkt der Spur
   - Plazieren weiterer Fenster um den Mittelpunklt der übrigen 8 Fenster. Diese Methode Folgt der "Spur" bis zum oberen Rand des Binärbildes und beschleunigt die Verarbeitung indem es nur nach aktiven Pixeln über einen kleinen Teil des Bildes sucht.
   - Pixel, die zu jeder Spurlinie gehören, werden identifiziert und die Numpy polyfit()-Methode wird Polynom zweiter Ordnung errchnet
-- Output Frame wird erzeugt aus Fahrspurbegrenzungen und das unverzerrte Bild 
+- Output frame wird erzeugt aus den errechneten Fahrspurbegrenzungen und dem entzerrten Input frame
 
 ## Anforderungen/Requirements 
 - numpy

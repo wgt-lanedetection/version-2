@@ -30,10 +30,11 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - python3 
 - picamera
 
-Markup: 
-1. James Madison
-2. James Monroe
-3. John Quincy Adams
+1. Item 1
+2. Item 2
+3. Item 3
+ * Item 3a
+ * Item 3b
 
 ## Wichtige Links
 

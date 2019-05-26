@@ -30,6 +30,10 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - python3 
 - picamera
 
+1. James Madison
+2. James Monroe
+3. John Quincy Adams
+
 ## Wichtige Links
 
 - Video Anleitung für OpenCV für den Raspberry pi

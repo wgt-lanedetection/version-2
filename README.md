@@ -1,12 +1,6 @@
 # version-2
 ## Advanced Lane detection
 
----
-title: About Front Matter
-example:
-  language: yaml
----
-
 ![](Beispiel.png)
 
 
@@ -36,7 +30,11 @@ Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - python3 
 - picamera
 
+1. First ordered list item
 
+  Paragraph of first item.
+
+2. Another item
 
 ## Wichtige Links
 

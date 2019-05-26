@@ -1,5 +1,5 @@
 ### version-2: Softwaremodul zur Fahrspurerkennung in Videoechtzeit für autonome Modellfahrzeuge
-
+* * * *
 #### Modellfahrzeug Ruby
 ![](ruby1.png)
 

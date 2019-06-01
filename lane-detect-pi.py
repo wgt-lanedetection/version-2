@@ -23,7 +23,21 @@ rawCapture = PiRGBArray(camera, size=image_size)
 # allow the camera to warmup
 time.sleep(0.1)
 
+point_ul =  45,182
+point_ol = 107,117
+point_or = 213,117
+point_ur = 288,182
 
+
+# Draw Points for street on frame
+def drawpoints(img):
+    img = cv2.circle(img,(point_ul),2,(0,0,255)) #Punkt unten Links
+    img = cv2.circle(img,(point_ol),2,(0,0,255)) #Punkt oben Links
+    img = cv2.circle(img,(point_or),2,(0,0,255)) #Punkt oben Rechts
+    img = cv2.circle(img,(point_ur),2,(0,0,255)) #Punkt unten rechts
+    return img
+
+# Undistor Frame
 def undistort1(img):
     cam_mtx = np.array([    
                          [168.12940519,   0,           162.07114665],
@@ -32,14 +46,11 @@ def undistort1(img):
                          ])
 
     cam_dst = np.array([-0.34068385,  0.14733747,  0.00066994,  0.00060006, -0.03411863])
-    
     img = cv2.undistort(img, cam_mtx, cam_dst, None, cam_mtx)
-    img = cv2.circle(img,(45,182),2,(0,0,255))  #Punkt unten Links
-    img = cv2.circle(img,(107,117),2,(0,0,255)) #Punkt oben Links
-    img = cv2.circle(img,(213,117),2,(0,0,255)) #Punkt oben Rechts
-    img = cv2.circle(img,(288,182),2,(0,0,255)) #Punkt unten rechts
-    
+    img = drawpoints(img)
     return img
+
+
 
 # class for lane detection
 class Lines():
@@ -92,8 +103,8 @@ class Lines():
         self.cam_dst = dst
 
     # undistort image
-    def undistort(self, img):
-        return cv2.undistort(img, self.cam_mtx, self.cam_dst, None,self.cam_mtx)
+ #   def undistort(self, img):
+ #       return cv2.undistort(img, self.cam_mtx, self.cam_dst, None,self.cam_mtx)
 
     # get binary image based on color thresholding
     def color_thresh(self, img, thresh=(0, 255)):
@@ -193,10 +204,10 @@ class Lines():
         # define vertices for perspective transformation
         #src = np.array([[left_bottom], [apex_l], [apex_r], [right_bottom]], dtype=np.float32)
         src = np.float32(
-                            [[ 45,   182], #Punkt unten Links
-                            [ 107,   118], #Punkt oben Links
-                            [ 213,   118], #Punkt oben Rechts
-                            [ 288,   182]])#Punkt unten Rechts
+                            [[ point_ul], #Punkt unten Links
+                            [  point_ol], #Punkt oben Links
+                            [  point_or], #Punkt oben Rechts
+                            [  point_ur]])#Punkt unten Rechts
         #dst = np.float32([[xsize/3,ysize],[xsize/4.5,0],[xsize-xsize/4.5,0],[xsize-xsize/3, ysize]])  
         dst = np.float32(
                             [[ 71,   182], #Punkt unten Links
@@ -486,7 +497,7 @@ class Lines():
             self.calculate_curvature_offset()
 
             # plot text on resulting image
-            img_text = "radius of curvature: " + str(round((self.left_curverad + self.right_curverad)/2,2)) + ' (m)'
+            #img_text = "radius of the curve: " + str(round((self.left_curverad + self.right_curverad)/2,2)) + ' (m)'
 
             if self.offset< 0:
                 #img_text2 = "vehicle is: " + str(round(np.abs(self.offset),2)) + ' (m) left of center'
@@ -501,7 +512,7 @@ class Lines():
             result2 = cv2.resize(np.hstack((result, np.vstack((small2,small)))), (0,0), fx=self.enlarge, fy=self.enlarge)
             #result2 = cv2.resize(np.hstack((np.vstack((filler,np.dstack((self.binary_image*255,self.binary_image*255,self.binary_image*255)))), np.vstack((small2,small)))), (0,0), fx=self.enlarge, fy=self.enlarge)
 
-            cv2.putText(result2,img_text, (15,15), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,255),1)
+            #cv2.putText(result2,img_text, (15,15), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,255),1)
             cv2.putText(result2,img_text2,(15,40), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,255),1)
 
             return result2 
@@ -600,4 +611,5 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
         # if the `q` key was pressed, break from the loop
         if key == ord("q"):
                 break
+
 

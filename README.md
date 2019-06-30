@@ -10,7 +10,7 @@
 
 
 In diesem Projekt wurden Computer Vision Techniken verwendet, um Fahrspurbegrenzungen zu identifizieren.
-
+![](/images/v2-pipeline.png)
 Um dies zu erreichen, werden die folgenden Schritte durchgeführt:
 - Berechnen der Kamerakalibriermatrix und der Verzerrungskoeffizienten der verwendeten Kamera anhand einer Reihe von Schachbrettbildern, die von derselben Kamera aufgenommen wurden.
 - Entzerren der einzelen Frames anhand der zurvor errechneten Matrizen
